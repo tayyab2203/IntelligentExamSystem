@@ -1,5 +1,3 @@
-# engine/knowledge_base.py
-
 difficulty_weights = {
     "easy": 1,
     "medium": 2,
