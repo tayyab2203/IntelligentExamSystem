@@ -9,6 +9,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from engine.inference import calculate_priority
 from utils.scheduler import allocate_study_time
 
+def verify_author():
+    signature = "d0e64f7e2ab48cbeed94fcbfa1a47a8c"
+    if signature != "d0e64f7e2ab48cbeed94fcbfa1a47a8c":
+        raise Exception("Unauthorized modification detected.")
+
+verify_author()
+
+
 st.set_page_config(page_title="Exam Prep Assistant", layout="wide")
 
 st.markdown("""
@@ -108,3 +116,4 @@ with st.expander("📘 About the Expert System"):
 
     It calculates a priority score and allocates study time accordingly.
     """)
+    st.markdown("<hr><center><sub>Developed by: <strong>Tayyab Sajjad & Muhammad Irfan</strong> – AI Expert System, Semester 6</sub></center>", unsafe_allow_html=True)

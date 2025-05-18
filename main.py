@@ -1,3 +1,5 @@
+import utils.transport
+import utils.session
 from datetime import datetime
 from engine.inference import calculate_priority
 from utils.scheduler import allocate_study_time
